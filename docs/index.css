@@ -1,17 +1,40 @@
 html, body {
   margin: 0;
-  padding: 25px;
-
+  padding: 0 5px;
+  width: 100%;
   font-family: "Nova Mono", monospace;
+  font-size: 20px;
+  box-sizing: border-box;
 }
 
 code {
   font-family: "Nova Mono", monospace;
 }
 
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+
+p {
+  line-height: 1.5em;
+}
+
 p code {
   background: #efefef;
-  padding: 2px;
+  padding: 0 2px;
+}
+
+#root {
+  max-width: 100%;
+}
+
+#root code, #root input {
+  font-size: 32px;
+}
+
+#url input {
+  font-size: 32px;
 }
 
 h1 {
@@ -24,4 +47,27 @@ h2 {
 
 h3 {
   margin: 0;
+}
+
+@media(min-width: 600px) {
+
+  body {
+    padding: 25px;
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  #root {
+    width: inherit;
+  }
+
+  #root code, #root input {
+    font-size: 16px;
+  }
+
+  #url input {
+    font-size: 16px;
+  }
+
 }

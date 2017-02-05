@@ -246,7 +246,7 @@ var URLInput = function URLInput() {
           replace = _ref.replace;
       return _react2.default.createElement(
         'div',
-        null,
+        { id: 'url' },
         _react2.default.createElement(
           'h3',
           null,
