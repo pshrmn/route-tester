@@ -151,12 +151,11 @@ var TestRoute = function (_React$Component) {
             null,
             _react2.default.createElement(
               'pre',
-              { style: { background: '#efefef' } },
+              { className: 'route' },
               _react2.default.createElement(
                 'code',
                 null,
                 '<Route',
-                _react2.default.createElement('br', null),
                 _react2.default.createElement(
                   'label',
                   null,
@@ -170,11 +169,11 @@ var TestRoute = function (_React$Component) {
                   }),
                   '"'
                 ),
-                _react2.default.createElement('br', null),
                 _react2.default.createElement(
                   'label',
                   null,
                   '  exact={',
+                  exact.toString(),
                   _react2.default.createElement('input', {
                     type: 'checkbox',
                     name: 'exact',
@@ -183,11 +182,11 @@ var TestRoute = function (_React$Component) {
                   }),
                   '}'
                 ),
-                _react2.default.createElement('br', null),
                 _react2.default.createElement(
                   'label',
                   null,
                   '  strict={',
+                  strict.toString(),
                   _react2.default.createElement('input', {
                     type: 'checkbox',
                     name: 'strict',
@@ -196,7 +195,6 @@ var TestRoute = function (_React$Component) {
                   }),
                   '}'
                 ),
-                _react2.default.createElement('br', null),
                 '  />'
               )
             ),

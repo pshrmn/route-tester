@@ -7,36 +7,6 @@ html, body {
   box-sizing: border-box;
 }
 
-code {
-  font-family: "Nova Mono", monospace;
-}
-
-input[type=checkbox] {
-  width: 20px;
-  height: 20px;
-}
-
-p {
-  line-height: 1.5em;
-}
-
-p code {
-  background: #efefef;
-  padding: 0 2px;
-}
-
-#root {
-  max-width: 100%;
-}
-
-#root code, #root input {
-  font-size: 32px;
-}
-
-#url input {
-  font-size: 32px;
-}
-
 h1 {
   margin: 5px 0;
 }
@@ -49,7 +19,55 @@ h3 {
   margin: 0;
 }
 
-@media(min-width: 600px) {
+p {
+  line-height: 1.5em;
+}
+
+p code {
+  background: #efefef;
+  padding: 0 2px;
+}
+
+code {
+  font-family: "Nova Mono", monospace;
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+.route {
+  background: #efefef;
+  padding: 2px;
+}
+
+.route code {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.route input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+
+#root {
+  max-width: 100%;
+}
+
+#root code, #root input {
+  font-size: 24px;
+}
+
+#url input {
+  font-size: 24px;
+}
+
+code label {
+  max-width: 100%;
+}
+
+@media(min-width: 450px) {
 
   body {
     padding: 25px;
@@ -70,4 +88,12 @@ h3 {
     font-size: 16px;
   }
 
+  pre {
+    overflow-x: inherit;
+  }
+
+  .route input[type=checkbox] {
+    width: inherit;
+    height: inherit;
+  }
 }

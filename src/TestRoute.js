@@ -24,10 +24,9 @@ export default class TestRoute extends React.Component {
     return (
       <Route path={path} strict={strict} exact={exact} children={({ match }) => (
         <div>
-          <pre style={{ background: '#efefef' }}>
+          <pre className='route'>
             <code>
               {'<Route'}
-              <br />
               <label>{'  path="'}
                 <input
                   type='text'
@@ -37,8 +36,8 @@ export default class TestRoute extends React.Component {
                   onChange={this.handleInput.bind(this)}
                   />{'"'}
               </label>
-              <br />
               <label>{'  exact={'}
+                { exact.toString() }
                 <input
                   type='checkbox'
                   name='exact'
@@ -47,8 +46,8 @@ export default class TestRoute extends React.Component {
                   />
                 {'}'}
               </label>
-              <br />
               <label>{'  strict={'}
+                { strict.toString() }
                 <input
                   type='checkbox'
                   name='strict'
@@ -57,7 +56,6 @@ export default class TestRoute extends React.Component {
                   />
                 {'}'}
               </label>
-              <br />
               {'  />'}
             </code>
           </pre>
