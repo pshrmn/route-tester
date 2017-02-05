@@ -4,7 +4,7 @@ module.exports = {
   context: path.join(__dirname, 'src'),
   entry: './index.js',
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'docs'),
     filename: 'bundle.js'
   },
   externals: {

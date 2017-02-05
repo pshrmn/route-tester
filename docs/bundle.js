@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -76,56 +76,10 @@ module.exports = React;
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = ReactDOM;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
 module.exports = ReactRouterDOM;
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(1);
-
-var _reactRouterDom = __webpack_require__(2);
-
-var _TestRoute = __webpack_require__(4);
-
-var _TestRoute2 = _interopRequireDefault(_TestRoute);
-
-var _URLInput = __webpack_require__(5);
-
-var _URLInput2 = _interopRequireDefault(_URLInput);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var App = function App() {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(_URLInput2.default, null),
-    _react2.default.createElement(_TestRoute2.default, null)
-  );
-};
-
-(0, _reactDom.render)(_react2.default.createElement(
-  _reactRouterDom.HashRouter,
-  null,
-  _react2.default.createElement(App, null)
-), document.getElementById('root'));
-
-/***/ }),
-/* 4 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -141,7 +95,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(2);
+var _reactRouterDom = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -268,7 +222,7 @@ var TestRoute = function (_React$Component) {
 exports.default = TestRoute;
 
 /***/ }),
-/* 5 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -282,7 +236,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(2);
+var _reactRouterDom = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -317,6 +271,52 @@ var URLInput = function URLInput() {
 };
 
 exports.default = URLInput;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = ReactDOM;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(4);
+
+var _reactRouterDom = __webpack_require__(1);
+
+var _TestRoute = __webpack_require__(2);
+
+var _TestRoute2 = _interopRequireDefault(_TestRoute);
+
+var _URLInput = __webpack_require__(3);
+
+var _URLInput2 = _interopRequireDefault(_URLInput);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_URLInput2.default, null),
+    _react2.default.createElement(_TestRoute2.default, null)
+  );
+};
+
+(0, _reactDom.render)(_react2.default.createElement(
+  _reactRouterDom.HashRouter,
+  null,
+  _react2.default.createElement(App, null)
+), document.getElementById('root'));
 
 /***/ })
 /******/ ]);
