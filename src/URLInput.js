@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom'
 const URLInput = () => (
   <Route render={({ location, replace }) => (
     <div>
-      <h2>Pathname:</h2>
+      <h3>Pathname:</h3>
       <div>
         <input
           type='text'

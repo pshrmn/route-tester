@@ -1,6 +1,6 @@
 {
   "name": "route-tester",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Test React Router v4 <Route>s",
   "main": "index.js",
   "scripts": {
