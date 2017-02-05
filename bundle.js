@@ -91,13 +91,55 @@ module.exports = ReactRouterDOM;
 "use strict";
 
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(1);
+
+var _reactRouterDom = __webpack_require__(2);
+
+var _TestRoute = __webpack_require__(4);
+
+var _TestRoute2 = _interopRequireDefault(_TestRoute);
+
+var _URLInput = __webpack_require__(5);
+
+var _URLInput2 = _interopRequireDefault(_URLInput);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_URLInput2.default, null),
+    _react2.default.createElement(_TestRoute2.default, null)
+  );
+};
+
+(0, _reactDom.render)(_react2.default.createElement(
+  _reactRouterDom.HashRouter,
+  null,
+  _react2.default.createElement(App, null)
+), document.getElementById('root'));
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(2);
 
@@ -223,21 +265,31 @@ var TestRoute = function (_React$Component) {
   return TestRoute;
 }(_react2.default.Component);
 
-var MatchIndicator = function MatchIndicator(_ref3) {
-  var color = _ref3.color;
-  return _react2.default.createElement('span', { style: {
-      background: color,
-      width: 25,
-      height: 25,
-      borderRadius: 15,
-      display: 'inline-block'
-    } });
-};
+exports.default = TestRoute;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var URLInput = function URLInput() {
-  return _react2.default.createElement(_reactRouterDom.Route, { render: function render(_ref4) {
-      var location = _ref4.location,
-          replace = _ref4.replace;
+  return _react2.default.createElement(_reactRouterDom.Route, { render: function render(_ref) {
+      var location = _ref.location,
+          replace = _ref.replace;
       return _react2.default.createElement(
         'div',
         null,
@@ -264,20 +316,7 @@ var URLInput = function URLInput() {
   });
 };
 
-var App = function App() {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(URLInput, null),
-    _react2.default.createElement(TestRoute, null)
-  );
-};
-
-(0, _reactDom.render)(_react2.default.createElement(
-  _reactRouterDom.HashRouter,
-  null,
-  _react2.default.createElement(App, null)
-), document.getElementById('root'));
+exports.default = URLInput;
 
 /***/ })
 /******/ ]);
