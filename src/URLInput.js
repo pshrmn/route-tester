@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 
 const URLInput = () => (
-  <Route render={({ location, replace }) => (
+  <Route render={({ location, history }) => (
     <div id='url'>
       <h3>Pathname:</h3>
       <div>
@@ -11,7 +11,7 @@ const URLInput = () => (
           placeholder='Pathname'
           value={location.pathname}
           style={{ width: '100%' }}
-          onChange={(event) => { replace(event.target.value) }}
+          onChange={(event) => { history.replace(event.target.value) }}
           />
       </div>
     </div>

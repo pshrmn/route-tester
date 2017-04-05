@@ -241,7 +241,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var URLInput = function URLInput() {
   return _react2.default.createElement(_reactRouterDom.Route, { render: function render(_ref) {
       var location = _ref.location,
-          replace = _ref.replace;
+          history = _ref.history;
       return _react2.default.createElement(
         'div',
         { id: 'url' },
@@ -259,7 +259,7 @@ var URLInput = function URLInput() {
             value: location.pathname,
             style: { width: '100%' },
             onChange: function onChange(event) {
-              replace(event.target.value);
+              history.replace(event.target.value);
             }
           })
         )
