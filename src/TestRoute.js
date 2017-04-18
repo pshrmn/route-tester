@@ -31,6 +31,7 @@ export default class TestRoute extends React.Component {
                 <input
                   type='text'
                   name='path'
+                  size='82'
                   value={path}
                   title='A path should begin with a forward slash (/)'
                   onChange={this.handleInput.bind(this)}
