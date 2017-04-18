@@ -40,6 +40,19 @@ pre {
   background: #efefef;
   padding: 2px;
 }
+.flexbox {
+  display: flex;
+}
+.flexbox .stretch {
+  flex: 1;
+}
+.flexbox .normal {
+  flex: 0; margin: 0 0 0 1rem;
+}
+.flexbox input {
+  padding: .5em 1em; width: 84%;
+}
+
 
 .route code {
   display: flex;
