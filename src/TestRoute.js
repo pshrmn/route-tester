@@ -24,8 +24,8 @@ export default class TestRoute extends React.Component {
     return (
       <Route path={path} strict={strict} exact={exact} children={({ match }) => (
         <div>
-          <pre className='route'>
-            <code>
+          <pre className='route flexbox'>
+            <code className='stretch' >
               {'<Route'}
               <label>{'  path="'}
                 <input
