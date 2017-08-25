@@ -124,7 +124,8 @@ var TestRoute = function (_React$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TestRoute.__proto__ || Object.getPrototypeOf(TestRoute)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       path: '',
       exact: false,
-      strict: false
+      strict: false,
+      sensitive: false
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -142,9 +143,16 @@ var TestRoute = function (_React$Component) {
       var _state = this.state,
           path = _state.path,
           exact = _state.exact,
-          strict = _state.strict;
+          strict = _state.strict,
+          sensitive = _state.sensitive;
 
-      return _react2.default.createElement(_reactRouterDom.Route, { path: path, strict: strict, exact: exact, children: function children(_ref2) {
+
+      return _react2.default.createElement(_reactRouterDom.Route, {
+        path: path,
+        strict: strict,
+        exact: exact,
+        sensitive: sensitive,
+        children: function children(_ref2) {
           var match = _ref2.match;
           return _react2.default.createElement(
             'div',
@@ -195,6 +203,19 @@ var TestRoute = function (_React$Component) {
                   }),
                   '}'
                 ),
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  '  sensitive={',
+                  sensitive.toString(),
+                  _react2.default.createElement('input', {
+                    type: 'checkbox',
+                    name: 'sensitive',
+                    value: sensitive,
+                    onChange: _this2.handleInput.bind(_this2)
+                  }),
+                  '}'
+                ),
                 '  />'
               )
             ),
@@ -210,7 +231,8 @@ var TestRoute = function (_React$Component) {
               )
             )
           );
-        } });
+        }
+      });
     }
   }]);
 

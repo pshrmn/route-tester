@@ -5,7 +5,8 @@ export default class TestRoute extends React.Component {
   state = {
     path: '',
     exact: false,
-    strict: false
+    strict: false,
+    sensitive: false
   }
 
   handleInput(event) {
@@ -19,55 +20,73 @@ export default class TestRoute extends React.Component {
     const {
       path,
       exact,
-      strict
+      strict,
+      sensitive
     } = this.state
+
     return (
-      <Route path={path} strict={strict} exact={exact} children={({ match }) => (
-        <div>
-          <pre className='route flexbox'>
-            <code className='stretch' >
-              {'<Route'}
-              <label>{'  path="'}
-                <input
-                  type='text'
-                  name='path'
-                  value={path}
-                  title='A path should begin with a forward slash (/)'
-                  onChange={this.handleInput.bind(this)}
-                  />{'"'}
-              </label>
-              <label>{'  exact={'}
-                { exact.toString() }
-                <input
-                  type='checkbox'
-                  name='exact'
-                  value={exact}
-                  onChange={this.handleInput.bind(this)}
-                  />
-                {'}'}
-              </label>
-              <label>{'  strict={'}
-                { strict.toString() }
-                <input
-                  type='checkbox'
-                  name='strict'
-                  value={strict}
-                  onChange={this.handleInput.bind(this)}
-                  />
-                {'}'}
-              </label>
-              {'  />'}
-            </code>
-          </pre>
-          <pre style={{
-            color: match ? 'green' : 'red',
-          }}>
-            <code>
-              { JSON.stringify(match, null, 2) }
-            </code>
-          </pre>
-        </div>
-      )} />
+      <Route
+        path={path}
+        strict={strict}
+        exact={exact}
+        sensitive={sensitive}
+        children={({ match }) => (
+          <div>
+            <pre className='route flexbox'>
+              <code className='stretch' >
+                {'<Route'}
+                <label>{'  path="'}
+                  <input
+                    type='text'
+                    name='path'
+                    value={path}
+                    title='A path should begin with a forward slash (/)'
+                    onChange={this.handleInput.bind(this)}
+                    />{'"'}
+                </label>
+                <label>{'  exact={'}
+                  { exact.toString() }
+                  <input
+                    type='checkbox'
+                    name='exact'
+                    value={exact}
+                    onChange={this.handleInput.bind(this)}
+                    />
+                  {'}'}
+                </label>
+                <label>{'  strict={'}
+                  { strict.toString() }
+                  <input
+                    type='checkbox'
+                    name='strict'
+                    value={strict}
+                    onChange={this.handleInput.bind(this)}
+                    />
+                  {'}'}
+                </label>
+                <label>{'  sensitive={'}
+                  { sensitive.toString() }
+                  <input
+                    type='checkbox'
+                    name='sensitive'
+                    value={sensitive}
+                    onChange={this.handleInput.bind(this)}
+                    />
+                  {'}'}
+                </label>
+                {'  />'}
+              </code>
+            </pre>
+            <pre style={{
+              color: match ? 'green' : 'red',
+            }}>
+              <code>
+                { JSON.stringify(match, null, 2) }
+              </code>
+            </pre>
+          </div>
+        )}
+      />
     )
   }
 }
