@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0 5px;
   width: 100%;
-  font-family: "Nova Mono", monospace;
+  font-family: sans-serif;
   font-size: 20px;
   box-sizing: border-box;
 }
@@ -28,8 +28,8 @@ p code {
   padding: 0 2px;
 }
 
-code {
-  font-family: "Nova Mono", monospace;
+code, input {
+  font-family: monospace;
 }
 
 pre {
